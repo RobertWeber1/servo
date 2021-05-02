@@ -14,1057 +14,1244 @@ Comment3 ""
 Comment4 ""
 $EndDescr
 $Comp
+L Driver_Motor:DRV8837 U?
+U 1 1 607B52D3
+P 9400 2200
+AR Path="/60683724/607B52D3" Ref="U?"  Part="1" 
+AR Path="/607B52D3" Ref="U5"  Part="1" 
+F 0 "U5" H 9100 1700 50  0000 C CNN
+F 1 "DRV8837" H 9700 1700 50  0000 C CNN
+F 2 "Package_SON:WSON-8-1EP_2x2mm_P0.5mm_EP0.9x1.6mm" H 9400 1350 50  0001 C CNN
+F 3 "http://www.ti.com/lit/ds/symlink/drv8837.pdf" H 9400 2200 50  0001 C CNN
+	1    9400 2200
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:C_Small C?
+U 1 1 607B52EB
+P 8950 1250
+AR Path="/60683724/607B52EB" Ref="C?"  Part="1" 
+AR Path="/607B52EB" Ref="C22"  Part="1" 
+F 0 "C22" H 9042 1296 50  0000 L CNN
+F 1 "0402_1.0uF__105_10%_25V" H 8999 1480 50  0001 L BNN
+F 2 "lc_lib:0402_C" H 8949 970 50  0001 L BNN
+F 3 "http://www.szlcsc.com/product/details_53938.html" H 8949 1070 50  0001 L BNN
+F 4 "贴片电容" H 8950 1250 50  0001 C CNN "description"
+F 5 "供应商链接" H 8949 870 50  0001 L BNN "ComponentLink1Description"
+F 6 "0402" H 8949 770 50  0001 L BNN "Package"
+F 7 "LC" H 8949 670 50  0001 L BNN "Supplier"
+F 8 "C52923" H 8949 570 50  0001 L BNN "SuppliersPartNumber"
+F 9 "1.0uF" H 9042 1205 50  0000 L CNN "Comment"
+	1    8950 1250
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR?
+U 1 1 607B52F1
+P 8950 1450
+AR Path="/60683724/607B52F1" Ref="#PWR?"  Part="1" 
+AR Path="/607B52F1" Ref="#PWR06"  Part="1" 
+F 0 "#PWR06" H 8950 1200 50  0001 C CNN
+F 1 "GND" H 8955 1277 50  0000 C CNN
+F 2 "" H 8950 1450 50  0001 C CNN
+F 3 "" H 8950 1450 50  0001 C CNN
+	1    8950 1450
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR?
+U 1 1 607B52F7
+P 9700 1450
+AR Path="/60683724/607B52F7" Ref="#PWR?"  Part="1" 
+AR Path="/607B52F7" Ref="#PWR07"  Part="1" 
+F 0 "#PWR07" H 9700 1200 50  0001 C CNN
+F 1 "GND" H 9705 1277 50  0000 C CNN
+F 2 "" H 9700 1450 50  0001 C CNN
+F 3 "" H 9700 1450 50  0001 C CNN
+	1    9700 1450
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:+3.3V #PWR?
+U 1 1 607B5305
+P 9200 1000
+AR Path="/60683724/607B5305" Ref="#PWR?"  Part="1" 
+AR Path="/607B5305" Ref="#PWR05"  Part="1" 
+F 0 "#PWR05" H 9200 850 50  0001 C CNN
+F 1 "+3.3V" H 9215 1173 50  0000 C CNN
+F 2 "" H 9200 1000 50  0001 C CNN
+F 3 "" H 9200 1000 50  0001 C CNN
+	1    9200 1000
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	9300 1000 9200 1000
+Wire Wire Line
+	9500 1000 9400 1000
+$Comp
+L power:GND #PWR?
+U 1 1 607B5311
+P 9400 2900
+AR Path="/60683724/607B5311" Ref="#PWR?"  Part="1" 
+AR Path="/607B5311" Ref="#PWR08"  Part="1" 
+F 0 "#PWR08" H 9400 2650 50  0001 C CNN
+F 1 "GND" H 9405 2727 50  0000 C CNN
+F 2 "" H 9400 2900 50  0001 C CNN
+F 3 "" H 9400 2900 50  0001 C CNN
+	1    9400 2900
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	9400 2900 9400 2700
+Text HLabel 8250 4050 2    50   Input ~ 0
+M+
+Text HLabel 10500 2500 2    50   Input ~ 0
+M-
+Text HLabel 9500 1000 1    50   Input ~ 0
+VM
+Wire Wire Line
+	9800 1900 10500 1900
+Wire Wire Line
+	10500 2500 9800 2500
+Text HLabel 8000 2100 0    50   Input ~ 0
+~SLEEP~
+Text HLabel 8000 2200 0    50   Input ~ 0
+IN1
+Text HLabel 8000 2300 0    50   Input ~ 0
+In2
+Wire Wire Line
+	8000 2100 9000 2100
+Wire Wire Line
+	8000 2200 9000 2200
+Wire Wire Line
+	8000 2300 9000 2300
+$Comp
+L smart_servo:MAX9918A U6
+U 1 1 607CBE73
+P 8550 4750
+F 0 "U6" H 8550 5115 50  0000 C CNN
+F 1 "MAX9918A" H 8550 5024 50  0000 C CNN
+F 2 "Package_SO:Diodes_SO-8EP" H 8550 5050 50  0001 C CNN
+F 3 "https://datasheet.lcsc.com/szlcsc/Maxim-Integrated-MAX9918ASA_C143631.pdf" H 8550 5050 50  0001 C CNN
+F 4 "C143631" H 8450 4250 50  0001 C CNN "LCSC Part #"
+	1    8550 4750
+	1    0    0    -1  
+$EndComp
+Text Label 10500 1900 0    50   ~ 0
+M(+)
+Text Label 7250 4050 0    50   ~ 0
+M(+)
+Wire Wire Line
+	8150 4650 7950 4650
+Wire Wire Line
+	8150 4750 7750 4750
+$Comp
+L power:GND #PWR?
+U 1 1 607F2F42
+P 8050 5100
+AR Path="/60683724/607F2F42" Ref="#PWR?"  Part="1" 
+AR Path="/607F2F42" Ref="#PWR012"  Part="1" 
+F 0 "#PWR012" H 8050 4850 50  0001 C CNN
+F 1 "GND" H 8055 4927 50  0000 C CNN
+F 2 "" H 8050 5100 50  0001 C CNN
+F 3 "" H 8050 5100 50  0001 C CNN
+	1    8050 5100
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	8050 5100 8050 4950
+Wire Wire Line
+	8050 4950 8150 4950
+$Comp
+L power:+3.3V #PWR?
+U 1 1 607FAA20
+P 9050 4050
+AR Path="/60683724/607FAA20" Ref="#PWR?"  Part="1" 
+AR Path="/607FAA20" Ref="#PWR09"  Part="1" 
+F 0 "#PWR09" H 9050 3900 50  0001 C CNN
+F 1 "+3.3V" H 9065 4223 50  0000 C CNN
+F 2 "" H 9050 4050 50  0001 C CNN
+F 3 "" H 9050 4050 50  0001 C CNN
+	1    9050 4050
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	9050 4050 9050 4150
+Wire Wire Line
+	9050 4650 8950 4650
+$Comp
+L lc_RES:0402_100KΩ__1003_1% R15
+U 1 1 6080C706
+P 10300 4400
+F 0 "R15" V 10254 4470 50  0000 L CNN
+F 1 "0402_100KΩ__1003_1%" H 10150 4590 50  0001 L BNN
+F 2 "Resistor_SMD:R_0402_1005Metric" H 10100 4160 50  0001 L BNN
+F 3 "http://www.szlcsc.com/product/details_26484.html" H 10100 4260 50  0001 L BNN
+F 4 "贴片电阻" H 10300 4400 50  0001 C CNN "description"
+F 5 "供应商链接" H 10100 4060 50  0001 L BNN "ComponentLink1Description"
+F 6 "0402" H 10100 3960 50  0001 L BNN "Package"
+F 7 "LC" H 10100 3860 50  0001 L BNN "Supplier"
+F 8 "C25741" H 10100 3760 50  0001 L BNN "SuppliersPartNumber"
+F 9 "100KΩ (1003) ±1%" V 10345 4470 50  0000 L CNN "Comment"
+	1    10300 4400
+	0    1    1    0   
+$EndComp
+$Comp
+L lc_RES:0402_100KΩ__1003_1% R17
+U 1 1 6080CB00
+P 10300 5100
+F 0 "R17" V 10254 5170 50  0000 L CNN
+F 1 "0402_100KΩ__1003_1%" H 10150 5290 50  0001 L BNN
+F 2 "Resistor_SMD:R_0402_1005Metric" H 10100 4860 50  0001 L BNN
+F 3 "http://www.szlcsc.com/product/details_26484.html" H 10100 4960 50  0001 L BNN
+F 4 "贴片电阻" H 10300 5100 50  0001 C CNN "description"
+F 5 "供应商链接" H 10100 4760 50  0001 L BNN "ComponentLink1Description"
+F 6 "0402" H 10100 4660 50  0001 L BNN "Package"
+F 7 "LC" H 10100 4560 50  0001 L BNN "Supplier"
+F 8 "C25741" H 10100 4460 50  0001 L BNN "SuppliersPartNumber"
+F 9 "100KΩ (1003) ±1%" V 10345 5170 50  0000 L CNN "Comment"
+	1    10300 5100
+	0    1    1    0   
+$EndComp
+$Comp
+L power:GND #PWR?
+U 1 1 6080CDE6
+P 10300 5450
+AR Path="/60683724/6080CDE6" Ref="#PWR?"  Part="1" 
+AR Path="/6080CDE6" Ref="#PWR013"  Part="1" 
+F 0 "#PWR013" H 10300 5200 50  0001 C CNN
+F 1 "GND" H 10305 5277 50  0000 C CNN
+F 2 "" H 10300 5450 50  0001 C CNN
+F 3 "" H 10300 5450 50  0001 C CNN
+	1    10300 5450
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	10300 5450 10300 5300
+Wire Wire Line
+	10300 4900 10300 4750
+Wire Wire Line
+	9050 4150 10300 4150
+Wire Wire Line
+	10300 4150 10300 4200
+Connection ~ 9050 4150
+Wire Wire Line
+	9050 4150 9050 4650
+Connection ~ 10300 4750
+Wire Wire Line
+	10300 4750 10300 4600
+$Comp
+L Device:R_Small R16
+U 1 1 60843B0A
+P 9500 5000
+F 0 "R16" H 9559 5046 50  0000 L CNN
+F 1 "R_Small" H 9559 4955 50  0000 L CNN
+F 2 "Resistor_SMD:R_0402_1005Metric" H 9500 5000 50  0001 C CNN
+F 3 "~" H 9500 5000 50  0001 C CNN
+	1    9500 5000
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	8950 4750 9500 4750
+$Comp
+L Device:R_Small R18
+U 1 1 6084CF07
+P 9500 5300
+F 0 "R18" H 9559 5346 50  0000 L CNN
+F 1 "R_Small" H 9559 5255 50  0000 L CNN
+F 2 "Resistor_SMD:R_0402_1005Metric" H 9500 5300 50  0001 C CNN
+F 3 "~" H 9500 5300 50  0001 C CNN
+	1    9500 5300
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	9500 4900 9500 4750
+Connection ~ 9500 4750
+Wire Wire Line
+	9500 4750 10300 4750
+Wire Wire Line
+	9500 5200 9500 5150
+Wire Wire Line
+	9500 5400 8950 5400
+Wire Wire Line
+	8950 5400 8950 4950
+Wire Wire Line
+	9500 5150 9200 5150
+Wire Wire Line
+	9200 5150 9200 4850
+Wire Wire Line
+	9200 4850 8950 4850
+Connection ~ 9500 5150
+Wire Wire Line
+	9500 5150 9500 5100
+Wire Wire Line
+	8950 5400 8950 6100
+Wire Wire Line
+	8950 6100 9500 6100
+Connection ~ 8950 5400
+Text HLabel 9500 6100 2    50   Input ~ 0
+MOTOR_CURRENT
+$Comp
+L MCU_ST_STM32F0:STM32F072C8Ux U8
+U 1 1 608B5CF8
+P 3000 5350
+F 0 "U8" H 2950 7031 50  0000 C CNN
+F 1 "STM32F072C8Ux" H 2950 6940 50  0000 C CNN
+F 2 "Package_DFN_QFN:QFN-48-1EP_7x7mm_P0.5mm_EP5.6x5.6mm" H 2400 3950 50  0001 R CNN
+F 3 "http://www.st.com/st-web-ui/static/active/en/resource/technical/document/datasheet/DM00090510.pdf" H 3000 5350 50  0001 C CNN
+F 4 "C92504" H 3000 5350 50  0001 C CNN "LCSC Part #"
+	1    3000 5350
+	1    0    0    -1  
+$EndComp
+$Comp
+L smart_servo:Outline O1
+U 1 1 6093956B
+P 6600 6100
+F 0 "O1" H 6828 6146 50  0000 L CNN
+F 1 "Outline" H 6828 6055 50  0000 L CNN
+F 2 "smart_servo:Outline" H 6600 5800 50  0001 C CNN
+F 3 "" H 6400 6400 50  0001 C CNN
+	1    6600 6100
+	1    0    0    -1  
+$EndComp
+Text HLabel 6300 6200 0    50   Input ~ 0
+M+
+Text HLabel 6300 6000 0    50   Input ~ 0
+M-
+Text HLabel 7600 4850 0    50   Input ~ 0
+SHUTDOWN
+Wire Wire Line
+	7600 4850 8150 4850
+$Comp
+L Device:R_Small R1
+U 1 1 6096001C
+P 7850 4050
+F 0 "R1" V 7654 4050 50  0000 C CNN
+F 1 "0,01" V 7745 4050 50  0000 C CNN
+F 2 "Resistor_SMD:R_0805_2012Metric" H 7850 4050 50  0001 C CNN
+F 3 "~" H 7850 4050 50  0001 C CNN
+F 4 "C127699" V 7850 4050 50  0001 C CNN "LCSC Part #"
+	1    7850 4050
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	7950 4050 7950 4650
+Wire Wire Line
+	7950 4050 8250 4050
+Connection ~ 7950 4050
+Wire Wire Line
+	7250 4050 7750 4050
+Wire Wire Line
+	7750 4050 7750 4750
+Connection ~ 7750 4050
+$Comp
+L lc_IC:MP2451DT-LF-Z_[C14123] U1
+U 1 1 6096FE52
+P 3950 1200
+F 0 "U1" H 4550 1365 50  0000 C CNN
+F 1 "MP2451DT-LF-Z_[C14123]" H 3999 1350 50  0001 L BNN
+F 2 "Package_TO_SOT_SMD:SOT-23-6" H 3949 600 50  0001 L BNN
+F 3 "http://www.szlcsc.com/product/details_14780.html" H 3949 700 50  0001 L BNN
+F 4 "DC-DC芯片" H 3950 1200 50  0001 C CNN "description"
+F 5 "供应商链接" H 3949 500 50  0001 L BNN "ComponentLink1Description"
+F 6 "SOT-23-6" H 3949 400 50  0001 L BNN "Package"
+F 7 "LC" H 3949 300 50  0001 L BNN "Supplier"
+F 8 "C14123" H 3949 200 50  0001 L BNN "SuppliersPartNumber"
+F 9 "MP2451DT-LF-Z" H 4550 1274 50  0000 C CNN "Comment"
+	1    3950 1200
+	1    0    0    -1  
+$EndComp
+$Comp
 L power:GND #PWR0101
-U 1 1 6054D11E
-P 1475 2375
-F 0 "#PWR0101" H 1475 2125 50  0001 C CNN
-F 1 "GND" H 1480 2202 50  0000 C CNN
-F 2 "" H 1475 2375 50  0001 C CNN
-F 3 "" H 1475 2375 50  0001 C CNN
-	1    1475 2375
+U 1 1 60971742
+P 3150 2350
+F 0 "#PWR0101" H 3150 2100 50  0001 C CNN
+F 1 "GND" H 3155 2177 50  0000 C CNN
+F 2 "" H 3150 2350 50  0001 C CNN
+F 3 "" H 3150 2350 50  0001 C CNN
+	1    3150 2350
 	1    0    0    -1  
 $EndComp
 $Comp
-L power:VDD #PWR0102
-U 1 1 6054D590
-P 1325 2175
-F 0 "#PWR0102" H 1325 2025 50  0001 C CNN
-F 1 "VDD" V 1325 2375 50  0000 C CNN
-F 2 "" H 1325 2175 50  0001 C CNN
-F 3 "" H 1325 2175 50  0001 C CNN
-	1    1325 2175
-	0    -1   -1   0   
-$EndComp
-$Comp
-L Device:C_Small C?
-U 1 1 60578E98
-P 2275 1025
-F 0 "C?" H 2367 1071 50  0000 L CNN
-F 1 "100n" H 2367 980 50  0000 L CNN
-F 2 "" H 2275 1025 50  0001 C CNN
-F 3 "~" H 2275 1025 50  0001 C CNN
-	1    2275 1025
+L power:GND #PWR0102
+U 1 1 60971A5D
+P 2750 1400
+F 0 "#PWR0102" H 2750 1150 50  0001 C CNN
+F 1 "GND" H 2755 1227 50  0000 C CNN
+F 2 "" H 2750 1400 50  0001 C CNN
+F 3 "" H 2750 1400 50  0001 C CNN
+	1    2750 1400
 	1    0    0    -1  
 $EndComp
 $Comp
-L Device:C_Small C?
-U 1 1 605790FD
-P 2650 1025
-F 0 "C?" H 2742 1071 50  0000 L CNN
-F 1 "4.7u" H 2742 980 50  0000 L CNN
-F 2 "" H 2650 1025 50  0001 C CNN
-F 3 "~" H 2650 1025 50  0001 C CNN
-	1    2650 1025
-	1    0    0    -1  
-$EndComp
-$Comp
-L power:VDD #PWR0103
-U 1 1 60590108
-P 1400 925
-F 0 "#PWR0103" H 1400 775 50  0001 C CNN
-F 1 "VDD" H 1417 1098 50  0000 C CNN
-F 2 "" H 1400 925 50  0001 C CNN
-F 3 "" H 1400 925 50  0001 C CNN
-	1    1400 925 
+L power:GND #PWR0103
+U 1 1 609725A7
+P 6800 1700
+F 0 "#PWR0103" H 6800 1450 50  0001 C CNN
+F 1 "GND" H 6805 1527 50  0000 C CNN
+F 2 "" H 6800 1700 50  0001 C CNN
+F 3 "" H 6800 1700 50  0001 C CNN
+	1    6800 1700
 	1    0    0    -1  
 $EndComp
 $Comp
 L power:GND #PWR0104
-U 1 1 60594152
-P 1400 1125
-F 0 "#PWR0104" H 1400 875 50  0001 C CNN
-F 1 "GND" H 1405 952 50  0000 C CNN
-F 2 "" H 1400 1125 50  0001 C CNN
-F 3 "" H 1400 1125 50  0001 C CNN
-	1    1400 1125
+U 1 1 60972A00
+P 5850 1750
+F 0 "#PWR0104" H 5850 1500 50  0001 C CNN
+F 1 "GND" H 5855 1577 50  0000 C CNN
+F 2 "" H 5850 1750 50  0001 C CNN
+F 3 "" H 5850 1750 50  0001 C CNN
+	1    5850 1750
 	1    0    0    -1  
 $EndComp
 $Comp
 L power:GND #PWR0105
-U 1 1 60594BDE
-P 3200 1125
-F 0 "#PWR0105" H 3200 875 50  0001 C CNN
-F 1 "GND" H 3205 952 50  0000 C CNN
-F 2 "" H 3200 1125 50  0001 C CNN
-F 3 "" H 3200 1125 50  0001 C CNN
-	1    3200 1125
+U 1 1 60972B8C
+P 5400 1750
+F 0 "#PWR0105" H 5400 1500 50  0001 C CNN
+F 1 "GND" H 5405 1577 50  0000 C CNN
+F 2 "" H 5400 1750 50  0001 C CNN
+F 3 "" H 5400 1750 50  0001 C CNN
+	1    5400 1750
 	1    0    0    -1  
 $EndComp
 Wire Wire Line
-	3200 925  3550 925 
-Wire Wire Line
-	3200 1125 3550 1125
+	2750 1400 3950 1400
 $Comp
-L power:VDDA #PWR0106
-U 1 1 605966A7
-P 1325 2075
-F 0 "#PWR0106" H 1325 1925 50  0001 C CNN
-F 1 "VDDA" V 1325 2300 50  0000 C CNN
-F 2 "" H 1325 2075 50  0001 C CNN
-F 3 "" H 1325 2075 50  0001 C CNN
-	1    1325 2075
+L Device:C_Small C1
+U 1 1 60975ED2
+P 5000 850
+F 0 "C1" V 4771 850 50  0000 C CNN
+F 1 "0402_100nF__104_10%_16V" H 5049 1080 50  0001 L BNN
+F 2 "Capacitor_SMD:C_0402_1005Metric" H 4999 570 50  0001 L BNN
+F 3 "http://www.szlcsc.com/product/details_1877.html" H 4999 670 50  0001 L BNN
+F 4 "贴片电容" H 5000 850 50  0001 C CNN "description"
+F 5 "供应商链接" H 4999 470 50  0001 L BNN "ComponentLink1Description"
+F 6 "0402" H 4999 370 50  0001 L BNN "Package"
+F 7 "LC" H 4999 270 50  0001 L BNN "Supplier"
+F 8 "C1525" H 4999 170 50  0001 L BNN "SuppliersPartNumber"
+F 9 "100nF" V 4862 850 50  0000 C CNN "Comment"
+	1    5000 850 
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	5100 850  5200 850 
+Wire Wire Line
+	5200 850  5200 1300
+Wire Wire Line
+	5200 1300 5150 1300
+Wire Wire Line
+	4900 850  3950 850 
+Wire Wire Line
+	3950 850  3950 1300
+$Comp
+L Device:D_Zener_Small D1
+U 1 1 6097BA78
+P 5850 1600
+F 0 "D1" V 5804 1668 50  0000 L CNN
+F 1 "LL-34_ZMM3V3" H 5899 1750 50  0001 L BNN
+F 2 "lc_lib:LL-34" H 5849 1200 50  0001 L BNN
+F 3 "http://www.szlcsc.com/product/details_8535.html" H 5849 1300 50  0001 L BNN
+F 4 "稳压二极管" H 5850 1600 50  0001 C CNN "description"
+F 5 "供应商链接" H 5849 1100 50  0001 L BNN "ComponentLink1Description"
+F 6 "LL-34" H 5849 1000 50  0001 L BNN "Package"
+F 7 "LC" H 5849 900 50  0001 L BNN "Supplier"
+F 8 "C8056" H 5849 800 50  0001 L BNN "SuppliersPartNumber"
+F 9 "ZMM3V3" V 5895 1668 50  0000 L CNN "Comment"
+	1    5850 1600
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	5850 1750 5850 1700
+$Comp
+L power:+5V #PWR0106
+U 1 1 609844D4
+P 5600 1550
+F 0 "#PWR0106" H 5600 1400 50  0001 C CNN
+F 1 "+5V" H 5615 1723 50  0000 C CNN
+F 2 "" H 5600 1550 50  0001 C CNN
+F 3 "" H 5600 1550 50  0001 C CNN
+	1    5600 1550
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	5150 1400 5400 1400
+Wire Wire Line
+	5400 1400 5400 1550
+Wire Wire Line
+	5400 1550 5600 1550
+Connection ~ 5200 1300
+$Comp
+L Device:C_Small C3
+U 1 1 6098BF53
+P 5400 1650
+F 0 "C3" H 5492 1696 50  0000 L CNN
+F 1 "0603_4.7uF__475_10%_16V" H 5449 1880 50  0001 L BNN
+F 2 "Capacitor_SMD:C_0603_1608Metric" H 5399 1370 50  0001 L BNN
+F 3 "http://www.szlcsc.com/product/details_20375.html" H 5399 1470 50  0001 L BNN
+F 4 "贴片电容" H 5400 1650 50  0001 C CNN "description"
+F 5 "供应商链接" H 5399 1270 50  0001 L BNN "ComponentLink1Description"
+F 6 "0603" H 5399 1170 50  0001 L BNN "Package"
+F 7 "LC" H 5399 1070 50  0001 L BNN "Supplier"
+F 8 "C19666" H 5399 970 50  0001 L BNN "SuppliersPartNumber"
+F 9 "4.7uF" H 4900 1650 50  0000 L CNN "Comment"
+	1    5400 1650
+	1    0    0    -1  
+$EndComp
+Connection ~ 5400 1550
+NoConn ~ 5150 1500
+$Comp
+L Device:L_Small L1
+U 1 1 60996E56
+P 6400 1300
+F 0 "L1" V 6585 1300 50  0000 C CNN
+F 1 "0805_2.2uH_10%" H 6449 1600 50  0001 L BNN
+F 2 "Inductor_SMD:L_0805_2012Metric" H 6399 1050 50  0001 L BNN
+F 3 "http://www.szlcsc.com/product/details_1395.html" H 6399 1150 50  0001 L BNN
+F 4 "贴片电感" H 6400 1300 50  0001 C CNN "description"
+F 5 "供应商链接" H 6399 950 50  0001 L BNN "ComponentLink1Description"
+F 6 "0805" H 6399 850 50  0001 L BNN "Package"
+F 7 "LC" H 6399 750 50  0001 L BNN "Supplier"
+F 8 "C1043" H 6399 650 50  0001 L BNN "SuppliersPartNumber"
+F 9 "2.2uH" V 6494 1300 50  0000 C CNN "Comment"
+	1    6400 1300
 	0    -1   -1   0   
 $EndComp
 $Comp
-L power:VDDA #PWR0107
-U 1 1 6059D9F8
-P 3200 925
-F 0 "#PWR0107" H 3200 775 50  0001 C CNN
-F 1 "VDDA" H 3217 1098 50  0000 C CNN
-F 2 "" H 3200 925 50  0001 C CNN
-F 3 "" H 3200 925 50  0001 C CNN
-	1    3200 925 
-	1    0    0    -1  
-$EndComp
-Wire Wire Line
-	1400 925  1600 925 
-Wire Wire Line
-	1400 1125 1600 1125
-Connection ~ 2275 925 
-Connection ~ 2275 1125
-Wire Wire Line
-	2275 925  2650 925 
-Wire Wire Line
-	2275 1125 2650 1125
-$Comp
-L Device:C_Small C?
-U 1 1 605A7425
-P 1925 1025
-F 0 "C?" H 2017 1071 50  0000 L CNN
-F 1 "100n" H 2017 980 50  0000 L CNN
-F 2 "" H 1925 1025 50  0001 C CNN
-F 3 "~" H 1925 1025 50  0001 C CNN
-	1    1925 1025
-	1    0    0    -1  
-$EndComp
-$Comp
-L Device:C_Small C?
-U 1 1 605A76B7
-P 1600 1025
-F 0 "C?" H 1692 1071 50  0000 L CNN
-F 1 "100n" H 1692 980 50  0000 L CNN
-F 2 "" H 1600 1025 50  0001 C CNN
-F 3 "~" H 1600 1025 50  0001 C CNN
-	1    1600 1025
-	1    0    0    -1  
-$EndComp
-$Comp
-L Device:C_Small C?
-U 1 1 605A8154
-P 1200 1025
-F 0 "C?" H 1292 1071 50  0000 L CNN
-F 1 "100n" H 1292 980 50  0000 L CNN
-F 2 "" H 1200 1025 50  0001 C CNN
-F 3 "~" H 1200 1025 50  0001 C CNN
-	1    1200 1025
-	1    0    0    -1  
-$EndComp
-$Comp
-L Device:C_Small C?
-U 1 1 605A8471
-P 800 1025
-F 0 "C?" H 892 1071 50  0000 L CNN
-F 1 "100n" H 892 980 50  0000 L CNN
-F 2 "" H 800 1025 50  0001 C CNN
-F 3 "~" H 800 1025 50  0001 C CNN
-	1    800  1025
-	1    0    0    -1  
-$EndComp
-Wire Wire Line
-	800  925  1200 925 
-Connection ~ 1400 925 
-Connection ~ 1200 925 
-Wire Wire Line
-	1200 925  1400 925 
-Wire Wire Line
-	800  1125 1200 1125
-Connection ~ 1400 1125
-Connection ~ 1200 1125
-Wire Wire Line
-	1200 1125 1400 1125
-Connection ~ 1925 925 
-Wire Wire Line
-	1925 925  2275 925 
-Connection ~ 1925 1125
-Wire Wire Line
-	1925 1125 2275 1125
-Connection ~ 1600 925 
-Wire Wire Line
-	1600 925  1925 925 
-Connection ~ 1600 1125
-Wire Wire Line
-	1600 1125 1925 1125
-$Comp
-L Device:C_Small C?
-U 1 1 605B715C
-P 3200 1025
-F 0 "C?" H 3292 1071 50  0000 L CNN
-F 1 "10n" H 3292 980 50  0000 L CNN
-F 2 "" H 3200 1025 50  0001 C CNN
-F 3 "~" H 3200 1025 50  0001 C CNN
-	1    3200 1025
-	1    0    0    -1  
-$EndComp
-$Comp
-L Device:C_Small C?
-U 1 1 605B75A9
-P 3550 1025
-F 0 "C?" H 3642 1071 50  0000 L CNN
-F 1 "1u" H 3642 980 50  0000 L CNN
-F 2 "" H 3550 1025 50  0001 C CNN
-F 3 "~" H 3550 1025 50  0001 C CNN
-	1    3550 1025
-	1    0    0    -1  
-$EndComp
-Text GLabel 1575 3975 0    50   Input ~ 0
-USART1_TX
-Text GLabel 1575 4075 0    50   Input ~ 0
-USART1_RX
-Text GLabel 1575 4175 0    50   Input ~ 0
-SPI1_NSS
-Text GLabel 1575 4275 0    50   Input ~ 0
-SPI1_SCK
-Text GLabel 1575 4375 0    50   Input ~ 0
-SPI1_MISO
-Text GLabel 1575 3125 0    50   Input ~ 0
-SPI1_MOSI
-$Comp
-L smart_servo:STSPIN32F0 U?
-U 1 1 6057CB4F
-P 2225 1825
-F 0 "U?" H 2225 1990 50  0000 C CNN
-F 1 "STSPIN32F0" H 2225 1899 50  0000 C CNN
-F 2 "smart_servo:QFN-48-1EP_7x7mm_Pitch0.5mm" H 2225 -2025 50  0001 C CNN
-F 3 "https://www.st.com/resource/en/datasheet/stspin32f0.pdf" H 2075 1875 50  0001 C CNN
-	1    2225 1825
-	1    0    0    -1  
-$EndComp
-$Comp
-L power:GND #PWR?
-U 1 1 605A4FB1
-P 1500 3225
-F 0 "#PWR?" H 1500 2975 50  0001 C CNN
-F 1 "GND" H 1505 3052 50  0000 C CNN
-F 2 "" H 1500 3225 50  0001 C CNN
-F 3 "" H 1500 3225 50  0001 C CNN
-	1    1500 3225
-	1    0    0    -1  
-$EndComp
-Wire Wire Line
-	1500 3225 1575 3225
-Wire Wire Line
-	1475 2375 1575 2375
-Wire Wire Line
-	1475 2375 1475 2275
-Wire Wire Line
-	1475 2275 1575 2275
-Connection ~ 1475 2375
-Wire Wire Line
-	1250 1975 1575 1975
-Wire Wire Line
-	1575 2175 1325 2175
-$Comp
-L power:GND #PWR?
-U 1 1 605FF8A4
-P 4375 1125
-F 0 "#PWR?" H 4375 875 50  0001 C CNN
-F 1 "GND" H 4380 952 50  0000 C CNN
-F 2 "" H 4375 1125 50  0001 C CNN
-F 3 "" H 4375 1125 50  0001 C CNN
-	1    4375 1125
-	1    0    0    -1  
-$EndComp
-$Comp
-L smart_servo:DMT3009LDT U?
-U 1 1 60692B97
-P 10425 1525
-F 0 "U?" H 10425 1690 50  0000 C CNN
-F 1 "DMT3009LDT" H 10425 1599 50  0000 C CNN
-F 2 "" H 10325 1525 50  0001 C CNN
-F 3 "" H 10325 1525 50  0001 C CNN
-	1    10425 1525
-	1    0    0    -1  
-$EndComp
-$Comp
-L Device:R_Small R?
-U 1 1 60692B9D
-P 9775 975
-F 0 "R?" V 9579 975 50  0000 C CNN
-F 1 "R_gh_on" V 9670 975 50  0000 C CNN
-F 2 "" H 9775 975 50  0001 C CNN
-F 3 "~" H 9775 975 50  0001 C CNN
-	1    9775 975 
-	0    1    1    0   
-$EndComp
-$Comp
-L Device:R_Small R?
-U 1 1 60692BA3
-P 9775 1250
-F 0 "R?" V 9579 1250 50  0000 C CNN
-F 1 "R_gh_off" V 9670 1250 50  0000 C CNN
-F 2 "" H 9775 1250 50  0001 C CNN
-F 3 "~" H 9775 1250 50  0001 C CNN
-	1    9775 1250
-	0    1    1    0   
-$EndComp
-$Comp
-L Device:D_Small D?
-U 1 1 60692BA9
-P 9375 1250
-F 0 "D?" H 9375 1455 50  0000 C CNN
-F 1 "D_gh_off" H 9375 1364 50  0000 C CNN
-F 2 "" V 9375 1250 50  0001 C CNN
-F 3 "~" V 9375 1250 50  0001 C CNN
-	1    9375 1250
-	1    0    0    -1  
-$EndComp
-Wire Wire Line
-	9475 1250 9675 1250
-Wire Wire Line
-	9675 975  9150 975 
-Wire Wire Line
-	9150 975  9150 1250
-Wire Wire Line
-	9150 1250 9275 1250
-Text GLabel 9025 975  0    50   Input ~ 0
-HSU
-Wire Wire Line
-	9025 975  9150 975 
-Connection ~ 9150 975 
-$Comp
-L Device:C_Small C?
-U 1 1 60692BB8
-P 9400 2250
-F 0 "C?" V 9450 2150 50  0000 C CNN
-F 1 "C_boot" V 9450 2425 50  0000 C CNN
-F 2 "" H 9400 2250 50  0001 C CNN
-F 3 "~" H 9400 2250 50  0001 C CNN
-	1    9400 2250
-	0    1    1    0   
-$EndComp
-Text GLabel 9025 2250 0    50   Input ~ 0
-VBOOTU
-Wire Wire Line
-	9025 2250 9300 2250
-Text GLabel 9025 2125 0    50   Input ~ 0
-OUTU
-Wire Wire Line
-	9025 2125 9950 2125
-Wire Wire Line
-	9950 2125 9950 2250
-Wire Wire Line
-	9950 2250 9500 2250
-Text GLabel 9025 2375 0    50   Input ~ 0
-LSU
-Wire Wire Line
-	9025 2375 10325 2375
-Text GLabel 10625 2475 3    50   Input ~ 0
-SHUNT
-Wire Wire Line
-	10425 1025 10425 975 
-Wire Wire Line
-	10425 975  10525 975 
-Connection ~ 10525 975 
-Wire Wire Line
-	10525 975  10525 1025
-Wire Wire Line
-	10525 975  10625 975 
-Wire Wire Line
-	10625 975  10625 1025
-Wire Wire Line
-	10425 975  10325 975 
-Wire Wire Line
-	10325 975  10325 1025
-Connection ~ 10425 975 
-Wire Wire Line
-	10225 1025 10225 975 
-Connection ~ 9975 975 
-Wire Wire Line
-	9975 975  9975 1250
-Wire Wire Line
-	10225 975  9975 975 
-Wire Wire Line
-	10425 2125 10425 2375
-Wire Wire Line
-	10425 2375 10525 2375
-Wire Wire Line
-	10525 2125 10525 2375
-Connection ~ 10525 2375
-Wire Wire Line
-	10525 2375 10625 2375
-Wire Wire Line
-	10625 2125 10625 2375
-Connection ~ 10625 2375
-Wire Wire Line
-	10625 2375 10625 2475
-Wire Wire Line
-	10325 2375 10325 2125
-Wire Wire Line
-	10225 2125 9950 2125
-Connection ~ 9950 2125
-Connection ~ 3200 925 
-Connection ~ 3200 1125
-$Comp
-L Device:C_Small C?
-U 1 1 6074B0A8
-P 7375 1100
-F 0 "C?" H 7467 1146 50  0000 L CNN
-F 1 "100n" H 7467 1055 50  0000 L CNN
-F 2 "" H 7375 1100 50  0001 C CNN
-F 3 "~" H 7375 1100 50  0001 C CNN
-	1    7375 1100
-	1    0    0    -1  
-$EndComp
-Wire Wire Line
-	6875 875  6875 850 
-Text GLabel 7400 850  2    50   Input ~ 0
-NRST
-$Comp
-L Switch:SW_Push SW?
-U 1 1 6075545A
-P 6875 1075
-F 0 "SW?" V 6950 1300 50  0000 R CNN
-F 1 "TS-1088-AR02016" V 6800 1900 50  0000 R CNN
-F 2 "" H 6875 1275 50  0001 C CNN
-F 3 "~" H 6875 1275 50  0001 C CNN
-	1    6875 1075
-	0    -1   -1   0   
-$EndComp
-Wire Wire Line
-	6875 850  7375 850 
-Wire Wire Line
-	7375 1000 7375 850 
-Connection ~ 7375 850 
-Wire Wire Line
-	7375 850  7400 850 
-Wire Wire Line
-	6875 1275 7375 1275
-Wire Wire Line
-	7375 1275 7375 1200
-Text GLabel 1575 2725 0    50   Input ~ 0
-NRST
-Text GLabel 1575 2825 0    50   Input ~ 0
-SWD_IO
-Text GLabel 1575 2925 0    50   Input ~ 0
-SWD_CLK
-Text GLabel 2875 2775 2    50   Input ~ 0
-HSV
-Text GLabel 2875 2975 2    50   Input ~ 0
-VBOOTV
-Text GLabel 2875 2875 2    50   Input ~ 0
-OUTV
-Text GLabel 2875 3075 2    50   Input ~ 0
-LSV
-Text GLabel 2875 3275 2    50   Input ~ 0
-HSU
-Text GLabel 2875 3475 2    50   Input ~ 0
-VBOOTU
-Text GLabel 2875 3375 2    50   Input ~ 0
-OUTU
-Text GLabel 2875 3575 2    50   Input ~ 0
-LSU
-Text GLabel 6050 3700 1    50   Input ~ 0
-SHUNT
-$Comp
-L power:GND #PWR?
-U 1 1 60794E16
-P 6050 5000
-F 0 "#PWR?" H 6050 4750 50  0001 C CNN
-F 1 "GND" H 6055 4827 50  0000 C CNN
-F 2 "" H 6050 5000 50  0001 C CNN
-F 3 "" H 6050 5000 50  0001 C CNN
-	1    6050 5000
-	1    0    0    -1  
-$EndComp
-$Comp
-L Device:R_Small R?
-U 1 1 607953E4
-P 6050 4350
-F 0 "R?" H 6109 4396 50  0000 L CNN
-F 1 "100m" H 6109 4305 50  0000 L CNN
-F 2 "" H 6050 4350 50  0001 C CNN
-F 3 "~" H 6050 4350 50  0001 C CNN
-F 4 "C25334 (1206)" H 6050 4350 50  0001 C CNN "LCSC Part #"
-	1    6050 4350
-	1    0    0    -1  
-$EndComp
-Wire Wire Line
-	6050 4250 6050 3875
-Wire Wire Line
-	6050 4450 6050 4825
-Wire Wire Line
-	9875 975  9975 975 
-Wire Wire Line
-	9875 1250 9975 1250
-Wire Wire Line
-	10625 900  10625 975 
-Connection ~ 10625 975 
-$Comp
-L smart_servo:DMT3009LDT U?
-U 1 1 60813AE0
-P 10400 3800
-F 0 "U?" H 10400 3965 50  0000 C CNN
-F 1 "DMT3009LDT" H 10400 3874 50  0000 C CNN
-F 2 "" H 10300 3800 50  0001 C CNN
-F 3 "" H 10300 3800 50  0001 C CNN
-	1    10400 3800
-	1    0    0    -1  
-$EndComp
-$Comp
-L Device:R_Small R?
-U 1 1 60813AEA
-P 9750 3250
-F 0 "R?" V 9554 3250 50  0000 C CNN
-F 1 "R_gh_on" V 9645 3250 50  0000 C CNN
-F 2 "" H 9750 3250 50  0001 C CNN
-F 3 "~" H 9750 3250 50  0001 C CNN
-	1    9750 3250
-	0    1    1    0   
-$EndComp
-$Comp
-L Device:R_Small R?
-U 1 1 60813AF4
-P 9750 3525
-F 0 "R?" V 9554 3525 50  0000 C CNN
-F 1 "R_gh_off" V 9645 3525 50  0000 C CNN
-F 2 "" H 9750 3525 50  0001 C CNN
-F 3 "~" H 9750 3525 50  0001 C CNN
-	1    9750 3525
-	0    1    1    0   
-$EndComp
-$Comp
-L Device:D_Small D?
-U 1 1 60813AFE
-P 9350 3525
-F 0 "D?" H 9350 3730 50  0000 C CNN
-F 1 "D_gh_off" H 9350 3639 50  0000 C CNN
-F 2 "" V 9350 3525 50  0001 C CNN
-F 3 "~" V 9350 3525 50  0001 C CNN
-	1    9350 3525
-	1    0    0    -1  
-$EndComp
-Wire Wire Line
-	9450 3525 9650 3525
-Wire Wire Line
-	9650 3250 9125 3250
-Wire Wire Line
-	9125 3250 9125 3525
-Wire Wire Line
-	9125 3525 9250 3525
-Text GLabel 9000 3250 0    50   Input ~ 0
-HSV
-Wire Wire Line
-	9000 3250 9125 3250
-Connection ~ 9125 3250
-$Comp
-L Device:C_Small C?
-U 1 1 60813B0F
-P 9375 4525
-F 0 "C?" V 9425 4425 50  0000 C CNN
-F 1 "C_boot" V 9425 4700 50  0000 C CNN
-F 2 "" H 9375 4525 50  0001 C CNN
-F 3 "~" H 9375 4525 50  0001 C CNN
-	1    9375 4525
-	0    1    1    0   
-$EndComp
-Text GLabel 9000 4525 0    50   Input ~ 0
-VBOOTV
-Wire Wire Line
-	9000 4525 9275 4525
-Text GLabel 9000 4400 0    50   Input ~ 0
-OUTV
-Wire Wire Line
-	9000 4400 9925 4400
-Wire Wire Line
-	9925 4400 9925 4525
-Wire Wire Line
-	9925 4525 9475 4525
-Text GLabel 9000 4650 0    50   Input ~ 0
-LSV
-Wire Wire Line
-	9000 4650 10300 4650
-Text GLabel 10600 4750 3    50   Input ~ 0
-SHUNT
-Wire Wire Line
-	10400 3300 10400 3250
-Wire Wire Line
-	10400 3250 10500 3250
-Connection ~ 10500 3250
-Wire Wire Line
-	10500 3250 10500 3300
-Wire Wire Line
-	10500 3250 10600 3250
-Wire Wire Line
-	10600 3250 10600 3300
-Wire Wire Line
-	10400 3250 10300 3250
-Wire Wire Line
-	10300 3250 10300 3300
-Connection ~ 10400 3250
-Wire Wire Line
-	10200 3300 10200 3250
-Connection ~ 9950 3250
-Wire Wire Line
-	9950 3250 9950 3525
-Wire Wire Line
-	10200 3250 9950 3250
-Wire Wire Line
-	10400 4400 10400 4650
-Wire Wire Line
-	10400 4650 10500 4650
-Wire Wire Line
-	10500 4400 10500 4650
-Connection ~ 10500 4650
-Wire Wire Line
-	10500 4650 10600 4650
-Wire Wire Line
-	10600 4400 10600 4650
-Connection ~ 10600 4650
-Wire Wire Line
-	10600 4650 10600 4750
-Wire Wire Line
-	10300 4650 10300 4400
-Wire Wire Line
-	10200 4400 9925 4400
-Connection ~ 9925 4400
-Wire Wire Line
-	9850 3250 9950 3250
-Wire Wire Line
-	9850 3525 9950 3525
-Wire Wire Line
-	10600 3175 10600 3250
-Connection ~ 10600 3250
-$Comp
-L Device:R_Small R?
-U 1 1 6082682F
-P 6700 3875
-F 0 "R?" V 6504 3875 50  0000 C CNN
-F 1 "R_oc_lp" V 6595 3875 50  0000 C CNN
-F 2 "" H 6700 3875 50  0001 C CNN
-F 3 "~" H 6700 3875 50  0001 C CNN
-	1    6700 3875
-	0    -1   -1   0   
-$EndComp
-$Comp
-L Device:C_Small C?
-U 1 1 608274B2
-P 6950 4075
-F 0 "C?" H 7042 4121 50  0000 L CNN
-F 1 "C_oc_lp" H 7042 4030 50  0000 L CNN
-F 2 "" H 6950 4075 50  0001 C CNN
-F 3 "~" H 6950 4075 50  0001 C CNN
-	1    6950 4075
-	1    0    0    -1  
-$EndComp
-Wire Wire Line
-	6800 3875 6950 3875
-Wire Wire Line
-	6950 3875 6950 3975
-Wire Wire Line
-	6950 3875 7075 3875
-Connection ~ 6950 3875
-Connection ~ 6050 4825
-Wire Wire Line
-	6050 4825 6050 5000
-$Comp
-L Device:C_Small C?
-U 1 1 6083F5E4
-P 4025 1025
-F 0 "C?" H 4117 1071 50  0000 L CNN
-F 1 "100n" H 4117 980 50  0000 L CNN
-F 2 "" H 4025 1025 50  0001 C CNN
-F 3 "~" H 4025 1025 50  0001 C CNN
-F 4 "ceramic" H 4025 1025 50  0001 C CNN "Hint"
-	1    4025 1025
-	1    0    0    -1  
-$EndComp
-$Comp
-L Device:C_Small C?
-U 1 1 6083FA35
-P 4375 1025
-F 0 "C?" H 4467 1071 50  0000 L CNN
-F 1 "10u" H 4467 980 50  0000 L CNN
-F 2 "" H 4375 1025 50  0001 C CNN
-F 3 "~" H 4375 1025 50  0001 C CNN
-F 4 "low ESR, ceramic" H 4375 1025 50  0001 C CNN "Hint"
-	1    4375 1025
-	1    0    0    -1  
-$EndComp
-Wire Wire Line
-	4025 925  4375 925 
-Wire Wire Line
-	4025 1125 4375 1125
-Connection ~ 4375 1125
-Wire Wire Line
-	1325 2075 1575 2075
-Text GLabel 1250 1975 0    50   Input ~ 0
-V_M
-Text GLabel 10625 900  1    50   Input ~ 0
-V_M
-Text GLabel 10600 3175 1    50   Input ~ 0
-V_M
-Text GLabel 4375 875  1    50   Input ~ 0
-V_M
-Wire Wire Line
-	4375 875  4375 925 
-Connection ~ 4375 925 
-$Comp
-L Device:L_Small L?
-U 1 1 60895F11
-P 5275 1125
-F 0 "L?" H 5323 1171 50  0000 L CNN
-F 1 "22u" H 5323 1080 50  0000 L CNN
-F 2 "" H 5275 1125 50  0001 C CNN
-F 3 "~" H 5275 1125 50  0001 C CNN
-	1    5275 1125
-	1    0    0    -1  
-$EndComp
-$Comp
-L Device:C_Small C?
-U 1 1 60896162
-P 5100 2000
-F 0 "C?" V 4875 1950 50  0000 L CNN
-F 1 "100n" V 4975 1925 50  0000 L CNN
-F 2 "" H 5100 2000 50  0001 C CNN
-F 3 "~" H 5100 2000 50  0001 C CNN
-	1    5100 2000
-	0    1    1    0   
-$EndComp
-Text GLabel 2875 2075 2    50   Input ~ 0
-SW
-Text GLabel 5350 875  2    50   Input ~ 0
-SW
-$Comp
-L power:VDDA #PWR?
-U 1 1 608973D5
-P 5275 1475
-F 0 "#PWR?" H 5275 1325 50  0001 C CNN
-F 1 "VDDA" V 5275 1700 50  0000 C CNN
-F 2 "" H 5275 1475 50  0001 C CNN
-F 3 "" H 5275 1475 50  0001 C CNN
-	1    5275 1475
-	0    1    1    0   
-$EndComp
-$Comp
-L power:GND #PWR?
-U 1 1 60897914
-P 4875 2225
-F 0 "#PWR?" H 4875 1975 50  0001 C CNN
-F 1 "GND" H 4880 2052 50  0000 C CNN
-F 2 "" H 4875 2225 50  0001 C CNN
-F 3 "" H 4875 2225 50  0001 C CNN
-	1    4875 2225
-	1    0    0    -1  
-$EndComp
-Wire Wire Line
-	5175 1650 5275 1650
-Wire Wire Line
-	5275 1650 5275 1475
-Wire Wire Line
-	5200 2000 5275 2000
-Wire Wire Line
-	5275 2000 5275 1650
-Connection ~ 5275 1650
-$Comp
-L Device:CP_Small C?
-U 1 1 60896BA9
-P 5075 1650
-F 0 "C?" V 4850 1650 50  0000 C CNN
-F 1 " 47u" V 4941 1650 50  0000 C CNN
-F 2 "" H 5075 1650 50  0001 C CNN
-F 3 "~" H 5075 1650 50  0001 C CNN
-	1    5075 1650
-	0    1    1    0   
-$EndComp
-Wire Wire Line
-	4875 2225 4875 2000
-Wire Wire Line
-	4875 2000 5000 2000
-Wire Wire Line
-	4875 2000 4875 1650
-Wire Wire Line
-	4875 1650 4975 1650
-Connection ~ 4875 2000
-Wire Wire Line
-	5350 875  5275 875 
-Wire Wire Line
-	4950 875  4875 875 
-Wire Wire Line
-	4875 875  4875 1650
-Connection ~ 4875 1650
-Wire Wire Line
-	5275 1025 5275 875 
-Connection ~ 5275 875 
-Wire Wire Line
-	5275 875  5150 875 
-Wire Wire Line
-	5275 1225 5275 1475
-Connection ~ 5275 1475
-$Comp
-L Device:D_Schottky_Small D?
-U 1 1 608F8796
-P 5050 875
-F 0 "D?" H 5050 670 50  0000 C CNN
-F 1 " B5817W-5819W" H 5050 761 50  0000 C CNN
-F 2 "" V 5050 875 50  0001 C CNN
-F 3 "~" V 5050 875 50  0001 C CNN
-F 4 "low forward voltage drop, VRRM = VM + 20%" H 5050 875 50  0001 C CNN "Hint"
-	1    5050 875 
-	-1   0    0    1   
-$EndComp
-$Comp
-L Device:R_Small R?
-U 1 1 60918120
-P 4575 3875
-F 0 "R?" V 4379 3875 50  0000 C CNN
-F 1 "R_1" V 4470 3875 50  0000 C CNN
-F 2 "" H 4575 3875 50  0001 C CNN
-F 3 "~" H 4575 3875 50  0001 C CNN
-	1    4575 3875
-	0    -1   -1   0   
-$EndComp
-$Comp
-L Device:R_Small R?
-U 1 1 609182D3
-P 5425 4825
-F 0 "R?" V 5229 4825 50  0000 C CNN
-F 1 "R_1" V 5320 4825 50  0000 C CNN
-F 2 "" H 5425 4825 50  0001 C CNN
-F 3 "~" H 5425 4825 50  0001 C CNN
-	1    5425 4825
-	0    -1   -1   0   
-$EndComp
-$Comp
-L Device:R_Small R?
-U 1 1 609187B8
-P 4325 4050
-F 0 "R?" V 4129 4050 50  0000 C CNN
-F 1 "R_2" V 4220 4050 50  0000 C CNN
-F 2 "" H 4325 4050 50  0001 C CNN
-F 3 "~" H 4325 4050 50  0001 C CNN
-	1    4325 4050
-	1    0    0    -1  
-$EndComp
-$Comp
-L Device:R_Small R?
-U 1 1 60918AF9
-P 4325 3700
-F 0 "R?" V 4129 3700 50  0000 C CNN
-F 1 "R_2" V 4220 3700 50  0000 C CNN
-F 2 "" H 4325 3700 50  0001 C CNN
-F 3 "~" H 4325 3700 50  0001 C CNN
-	1    4325 3700
-	1    0    0    -1  
-$EndComp
-Wire Wire Line
-	6050 3875 4675 3875
-$Comp
-L power:VDD #PWR?
-U 1 1 6093A697
-P 4325 3600
-F 0 "#PWR?" H 4325 3450 50  0001 C CNN
-F 1 "VDD" V 4325 3800 50  0000 C CNN
-F 2 "" H 4325 3600 50  0001 C CNN
-F 3 "" H 4325 3600 50  0001 C CNN
-	1    4325 3600
-	1    0    0    -1  
-$EndComp
-Wire Wire Line
-	4325 3800 4325 3875
-Wire Wire Line
-	4325 3875 4475 3875
-Wire Wire Line
-	4325 3875 4325 3950
-Connection ~ 4325 3875
-$Comp
-L power:GNDA #PWR?
-U 1 1 60943579
-P 4325 4150
-F 0 "#PWR?" H 4325 3900 50  0001 C CNN
-F 1 "GNDA" H 4330 3977 50  0000 C CNN
-F 2 "" H 4325 4150 50  0001 C CNN
-F 3 "" H 4325 4150 50  0001 C CNN
-	1    4325 4150
-	1    0    0    -1  
-$EndComp
-Wire Wire Line
-	4875 4525 4875 4825
-Wire Wire Line
-	4875 4825 5325 4825
-$Comp
-L Device:R_Small R?
-U 1 1 60955756
-P 4625 4675
-F 0 "R?" V 4429 4675 50  0000 C CNN
-F 1 "R_2" V 4520 4675 50  0000 C CNN
-F 2 "" H 4625 4675 50  0001 C CNN
-F 3 "~" H 4625 4675 50  0001 C CNN
-	1    4625 4675
-	-1   0    0    1   
-$EndComp
-$Comp
-L Device:C_Small C?
-U 1 1 6095A318
-P 4325 4675
-F 0 "C?" V 4100 4625 50  0000 L CNN
-F 1 "100n" V 4200 4600 50  0000 L CNN
-F 2 "" H 4325 4675 50  0001 C CNN
-F 3 "~" H 4325 4675 50  0001 C CNN
-	1    4325 4675
+L Device:C_Small C2
+U 1 1 60997FD9
+P 6800 1600
+F 0 "C2" H 6708 1554 50  0000 R CNN
+F 1 "0603_10uF__106_10%_10V" H 6849 1830 50  0001 L BNN
+F 2 "lc_lib:0603_C" H 6799 1320 50  0001 L BNN
+F 3 "http://www.szlcsc.com/product/details_20411.html" H 6799 1420 50  0001 L BNN
+F 4 "贴片电容" H 6800 1600 50  0001 C CNN "description"
+F 5 "供应商链接" H 6799 1220 50  0001 L BNN "ComponentLink1Description"
+F 6 "0603" H 6799 1120 50  0001 L BNN "Package"
+F 7 "LC" H 6799 1020 50  0001 L BNN "Supplier"
+F 8 "C19702" H 6799 920 50  0001 L BNN "SuppliersPartNumber"
+F 9 "10uF" H 6708 1645 50  0000 R CNN "Comment"
+	1    6800 1600
 	-1   0    0    1   
 $EndComp
 Wire Wire Line
-	4875 4825 4625 4825
-Connection ~ 4875 4825
+	5850 1500 5850 1300
 Wire Wire Line
-	4025 4525 4325 4525
+	5850 1300 6300 1300
 Wire Wire Line
-	4625 4575 4625 4525
-Connection ~ 4625 4525
-Wire Wire Line
-	4625 4525 4875 4525
-Wire Wire Line
-	4325 4775 4325 4825
-Connection ~ 4325 4825
-Wire Wire Line
-	4625 4775 4625 4825
-Connection ~ 4625 4825
-Wire Wire Line
-	4625 4825 4325 4825
-Wire Wire Line
-	4325 3875 4025 3875
-Text GLabel 4025 5500 0    50   Input ~ 0
-ADC1
-Text GLabel 1575 4475 0    50   Input ~ 0
-ADC1
+	6800 1300 6800 1500
 $Comp
-L Device:R_Small R?
-U 1 1 609C91A3
-P 4325 5275
-F 0 "R?" V 4129 5275 50  0000 C CNN
-F 1 "R_lp" V 4220 5275 50  0000 C CNN
-F 2 "" H 4325 5275 50  0001 C CNN
-F 3 "~" H 4325 5275 50  0001 C CNN
-	1    4325 5275
+L power:+3.3V #PWR0107
+U 1 1 609A3FC1
+P 6800 1200
+F 0 "#PWR0107" H 6800 1050 50  0001 C CNN
+F 1 "+3.3V" H 6815 1373 50  0000 C CNN
+F 2 "" H 6800 1200 50  0001 C CNN
+F 3 "" H 6800 1200 50  0001 C CNN
+	1    6800 1200
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	6800 1200 6800 1300
+Connection ~ 6800 1300
+Wire Wire Line
+	6500 1300 6650 1300
+Wire Wire Line
+	5200 1300 5850 1300
+Connection ~ 5850 1300
+$Comp
+L Device:R_Small R3
+U 1 1 609E93B8
+P 3850 1650
+F 0 "R3" H 3909 1696 50  0000 L CNN
+F 1 "0402_120KΩ__1203_1%" H 3700 1840 50  0001 L BNN
+F 2 "Resistor_SMD:R_0402_1005Metric" H 3650 1410 50  0001 L BNN
+F 3 "http://www.szlcsc.com/product/details_26493.html" H 3650 1510 50  0001 L BNN
+F 4 "贴片电阻" H 3850 1650 50  0001 C CNN "description"
+F 5 "供应商链接" H 3650 1310 50  0001 L BNN "ComponentLink1Description"
+F 6 "0402" H 3650 1210 50  0001 L BNN "Package"
+F 7 "LC" H 3650 1110 50  0001 L BNN "Supplier"
+F 8 "C25750" H 3650 1010 50  0001 L BNN "SuppliersPartNumber"
+F 9 "120KΩ" H 3909 1605 50  0000 L CNN "Comment"
+	1    3850 1650
 	1    0    0    -1  
 $EndComp
 $Comp
-L power:GNDA #PWR?
-U 1 1 609C970D
-P 4325 5950
-F 0 "#PWR?" H 4325 5700 50  0001 C CNN
-F 1 "GNDA" H 4330 5777 50  0000 C CNN
-F 2 "" H 4325 5950 50  0001 C CNN
-F 3 "" H 4325 5950 50  0001 C CNN
-	1    4325 5950
+L Device:R_Small R5
+U 1 1 609EA25B
+P 3850 1900
+F 0 "R5" H 3909 1946 50  0000 L CNN
+F 1 "0402_2KΩ__2001_1%" H 3700 2090 50  0001 L BNN
+F 2 "Resistor_SMD:R_0402_1005Metric" H 3650 1660 50  0001 L BNN
+F 3 "http://www.szlcsc.com/product/details_4516.html" H 3650 1760 50  0001 L BNN
+F 4 "贴片电阻" H 3850 1900 50  0001 C CNN "description"
+F 5 "供应商链接" H 3650 1560 50  0001 L BNN "ComponentLink1Description"
+F 6 "0402" H 3650 1460 50  0001 L BNN "Package"
+F 7 "LC" H 3650 1360 50  0001 L BNN "Supplier"
+F 8 "C4109" H 3650 1260 50  0001 L BNN "SuppliersPartNumber"
+F 9 "2KΩ " H 3909 1855 50  0000 L CNN "Comment"
+	1    3850 1900
 	1    0    0    -1  
 $EndComp
-Text Notes 5000 2525 0    50   ~ 0
-* recomended layout on page 8 of: \nhttps://www.st.com/resource/en/\napplication_note/dm00470266-\nstspin32f0f0af0b--buck-converter-\nstmicroelectronics.pdf  
-Text Notes 5000 5875 0    50   ~ 0
-* values from:\nhttps://www.st.com/resource/en/\napplication_note/dm00653792-\ncurrent-sensing-in-motion-control-\napplications-stmicroelectronics.pdf
-Text GLabel 2875 5475 2    50   Input ~ 0
-OC_COMP
-Text GLabel 4025 3875 0    50   Input ~ 0
-OP1P
-Text GLabel 4025 4525 0    50   Input ~ 0
-OP1N
-Text GLabel 4025 4825 0    50   Input ~ 0
-OP1O
-Text GLabel 2875 3875 2    50   Input ~ 0
-OP1P
-Text GLabel 2875 3975 2    50   Input ~ 0
-OP1N
-Text GLabel 2875 4075 2    50   Input ~ 0
-OP1O
-Text GLabel 7075 3875 2    50   Input ~ 0
-OC_COMP
+$Comp
+L Device:R_Small R7
+U 1 1 609EA379
+P 3850 2150
+F 0 "R7" H 3909 2196 50  0000 L CNN
+F 1 "0402_2KΩ__2001_1%" H 3700 2340 50  0001 L BNN
+F 2 "Resistor_SMD:R_0402_1005Metric" H 3650 1910 50  0001 L BNN
+F 3 "http://www.szlcsc.com/product/details_4516.html" H 3650 2010 50  0001 L BNN
+F 4 "贴片电阻" H 3850 2150 50  0001 C CNN "description"
+F 5 "供应商链接" H 3650 1810 50  0001 L BNN "ComponentLink1Description"
+F 6 "0402" H 3650 1710 50  0001 L BNN "Package"
+F 7 "LC" H 3650 1610 50  0001 L BNN "Supplier"
+F 8 "C4109" H 3650 1510 50  0001 L BNN "SuppliersPartNumber"
+F 9 "2KΩ" H 3909 2105 50  0000 L CNN "Comment"
+	1    3850 2150
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:C_Small C4
+U 1 1 609F3D06
+P 3500 1900
+F 0 "C4" H 3408 1854 50  0000 R CNN
+F 1 "0402_33pF__330_5%_50V" H 3549 2130 50  0001 L BNN
+F 2 "Capacitor_SMD:C_0402_1005Metric" H 3499 1620 50  0001 L BNN
+F 3 "http://www.szlcsc.com/product/details_1914.html" H 3499 1720 50  0001 L BNN
+F 4 "贴片电容" H 3500 1900 50  0001 C CNN "description"
+F 5 "供应商链接" H 3499 1520 50  0001 L BNN "ComponentLink1Description"
+F 6 "0402" H 3499 1420 50  0001 L BNN "Package"
+F 7 "LC" H 3499 1320 50  0001 L BNN "Supplier"
+F 8 "C1562" H 3499 1220 50  0001 L BNN "SuppliersPartNumber"
+F 9 "33pF" H 3408 1945 50  0000 R CNN "Comment"
+	1    3500 1900
+	-1   0    0    1   
+$EndComp
 Wire Wire Line
-	4325 4575 4325 4525
-Connection ~ 4325 4525
+	6650 1300 6650 2350
 Wire Wire Line
-	4325 4525 4625 4525
+	6650 2350 3850 2350
+Wire Wire Line
+	3850 2350 3850 2250
+Connection ~ 6650 1300
+Wire Wire Line
+	6650 1300 6800 1300
+Wire Wire Line
+	3850 2050 3850 2000
+Wire Wire Line
+	3850 1800 3850 1750
+Wire Wire Line
+	3850 1550 3850 1500
+Wire Wire Line
+	3850 1500 3950 1500
+Wire Wire Line
+	3850 1500 3500 1500
+Wire Wire Line
+	3500 1500 3500 1800
+Connection ~ 3850 1500
+Wire Wire Line
+	3500 2000 3500 2350
+Wire Wire Line
+	3500 2350 3850 2350
+Connection ~ 3850 2350
 $Comp
-L power:GND #PWR?
-U 1 1 60A48972
-P 2575 6125
-F 0 "#PWR?" H 2575 5875 50  0001 C CNN
-F 1 "GND" H 2580 5952 50  0000 C CNN
-F 2 "" H 2575 6125 50  0001 C CNN
-F 3 "" H 2575 6125 50  0001 C CNN
-	1    2575 6125
-	1    0    0    -1  
+L Device:R_Small R6
+U 1 1 60A160AE
+P 3150 2150
+F 0 "R6" H 3091 2104 50  0000 R CNN
+F 1 "0402_200Ω__2000_1%" H 3000 2340 50  0001 L BNN
+F 2 "Resistor_SMD:R_0402_1005Metric" H 2950 1910 50  0001 L BNN
+F 3 "http://www.szlcsc.com/product/details_25830.html" H 2950 2010 50  0001 L BNN
+F 4 "贴片电阻" H 3150 2150 50  0001 C CNN "description"
+F 5 "供应商链接" H 2950 1810 50  0001 L BNN "ComponentLink1Description"
+F 6 "0402" H 2950 1710 50  0001 L BNN "Package"
+F 7 "LC" H 2950 1610 50  0001 L BNN "Supplier"
+F 8 "C25087" H 2950 1510 50  0001 L BNN "SuppliersPartNumber"
+F 9 "200Ω" H 3091 2195 50  0000 R CNN "Comment"
+	1    3150 2150
+	-1   0    0    1   
 $EndComp
 $Comp
-L power:GNDA #PWR?
-U 1 1 60A48A86
-P 2075 6125
-F 0 "#PWR?" H 2075 5875 50  0001 C CNN
-F 1 "GNDA" H 2080 5952 50  0000 C CNN
-F 2 "" H 2075 6125 50  0001 C CNN
-F 3 "" H 2075 6125 50  0001 C CNN
-	1    2075 6125
-	1    0    0    -1  
+L Device:R_Small R4
+U 1 1 60A150B3
+P 3150 1900
+F 0 "R4" H 3050 1850 50  0000 C CNN
+F 1 "0402_470Ω__4700_1%" H 3000 2090 50  0001 L BNN
+F 2 "Resistor_SMD:R_0402_1005Metric" H 2950 1660 50  0001 L BNN
+F 3 "http://www.szlcsc.com/product/details_25860.html" H 2950 1760 50  0001 L BNN
+F 4 "贴片电阻" H 3150 1900 50  0001 C CNN "description"
+F 5 "供应商链接" H 2950 1560 50  0001 L BNN "ComponentLink1Description"
+F 6 "0402" H 2950 1460 50  0001 L BNN "Package"
+F 7 "LC" H 2950 1360 50  0001 L BNN "Supplier"
+F 8 "C25117" H 2950 1260 50  0001 L BNN "SuppliersPartNumber"
+F 9 "470Ω" H 3000 1950 50  0000 C CNN "Comment"
+	1    3150 1900
+	-1   0    0    1   
 $EndComp
 $Comp
-L Device:R_Small R?
-U 1 1 60A48F46
-P 2325 6125
-F 0 "R?" V 2129 6125 50  0000 C CNN
-F 1 "0" V 2220 6125 50  0000 C CNN
-F 2 "" H 2325 6125 50  0001 C CNN
-F 3 "~" H 2325 6125 50  0001 C CNN
-	1    2325 6125
+L Device:R_Small R2
+U 1 1 60A138D3
+P 3150 1650
+F 0 "R2" H 3091 1604 50  0000 R CNN
+F 1 "0402_8.2KΩ__8201_1%" H 3000 1840 50  0001 L BNN
+F 2 "Resistor_SMD:R_0402_1005Metric" H 2950 1410 50  0001 L BNN
+F 3 "http://www.szlcsc.com/product/details_26667.html" H 2950 1510 50  0001 L BNN
+F 4 "贴片电阻" H 3150 1650 50  0001 C CNN "description"
+F 5 "供应商链接" H 2950 1310 50  0001 L BNN "ComponentLink1Description"
+F 6 "0402" H 2950 1210 50  0001 L BNN "Package"
+F 7 "LC" H 2950 1110 50  0001 L BNN "Supplier"
+F 8 "C25924" H 2950 1010 50  0001 L BNN "SuppliersPartNumber"
+F 9 "8.2KΩ" H 3091 1695 50  0000 R CNN "Comment"
+	1    3150 1650
+	-1   0    0    1   
+$EndComp
+Wire Wire Line
+	3150 1750 3150 1800
+Wire Wire Line
+	3150 2000 3150 2050
+Wire Wire Line
+	3150 2250 3150 2350
+Wire Wire Line
+	3150 1550 3150 1500
+Wire Wire Line
+	3150 1500 3500 1500
+Connection ~ 3500 1500
+$Comp
+L Connector_Generic:Conn_01x04 J3
+U 1 1 60A5481B
+P 800 4200
+F 0 "J3" H 718 3775 50  0000 C CNN
+F 1 "Conn_01x04" H 718 3866 50  0000 C CNN
+F 2 "" H 800 4200 50  0001 C CNN
+F 3 "~" H 800 4200 50  0001 C CNN
+	1    800  4200
+	-1   0    0    1   
+$EndComp
+$Comp
+L Connector_Generic:Conn_01x04 J4
+U 1 1 60A54B7A
+P 800 4950
+F 0 "J4" H 718 4525 50  0000 C CNN
+F 1 "Conn_01x04" H 718 4616 50  0000 C CNN
+F 2 "" H 800 4950 50  0001 C CNN
+F 3 "~" H 800 4950 50  0001 C CNN
+	1    800  4950
+	-1   0    0    1   
+$EndComp
+$Comp
+L Connector_Generic:Conn_01x02 J2
+U 1 1 60A55320
+P 850 1950
+F 0 "J2" H 850 1750 50  0000 C CNN
+F 1 "Conn_01x02" H 850 2050 50  0000 C CNN
+F 2 "" H 850 1950 50  0001 C CNN
+F 3 "~" H 850 1950 50  0001 C CNN
+	1    850  1950
+	-1   0    0    1   
+$EndComp
+$Comp
+L Connector_Generic:Conn_01x02 J1
+U 1 1 60A55674
+P 850 1550
+F 0 "J1" H 850 1350 50  0000 C CNN
+F 1 "Conn_01x02" H 850 1650 50  0000 C CNN
+F 2 "" H 850 1550 50  0001 C CNN
+F 3 "~" H 850 1550 50  0001 C CNN
+	1    850  1550
+	-1   0    0    1   
+$EndComp
+$Comp
+L Transistor_FET:AO3401A Q1
+U 1 1 60A5AAB2
+P 1500 1550
+F 0 "Q1" V 1842 1550 50  0000 C CNN
+F 1 "AO3401A" V 1751 1550 50  0000 C CNN
+F 2 "Package_TO_SOT_SMD:SOT-23" H 1700 1475 50  0001 L CIN
+F 3 "http://www.aosmd.com/pdfs/datasheet/AO3401A.pdf" H 1500 1550 50  0001 L CNN
+	1    1500 1550
 	0    -1   -1   0   
 $EndComp
+$Comp
+L power:GND #PWR03
+U 1 1 60A5E0C8
+P 1500 1950
+F 0 "#PWR03" H 1500 1700 50  0001 C CNN
+F 1 "GND" H 1505 1777 50  0000 C CNN
+F 2 "" H 1500 1950 50  0001 C CNN
+F 3 "" H 1500 1950 50  0001 C CNN
+	1    1500 1950
+	1    0    0    -1  
+$EndComp
 Wire Wire Line
-	2075 6125 2225 6125
+	1050 1450 1300 1450
+$Comp
+L power:+5V #PWR01
+U 1 1 60A70169
+P 1850 1450
+F 0 "#PWR01" H 1850 1300 50  0001 C CNN
+F 1 "+5V" H 1865 1623 50  0000 C CNN
+F 2 "" H 1850 1450 50  0001 C CNN
+F 3 "" H 1850 1450 50  0001 C CNN
+	1    1850 1450
+	1    0    0    -1  
+$EndComp
 Wire Wire Line
-	2425 6125 2575 6125
+	1700 1450 1850 1450
+$Comp
+L power:PWR_FLAG #FLG01
+U 1 1 60A74D4E
+P 1850 1450
+F 0 "#FLG01" H 1850 1525 50  0001 C CNN
+F 1 "PWR_FLAG" H 1850 1623 50  0000 C CNN
+F 2 "" H 1850 1450 50  0001 C CNN
+F 3 "~" H 1850 1450 50  0001 C CNN
+	1    1850 1450
+	-1   0    0    1   
+$EndComp
+Connection ~ 1850 1450
+Wire Wire Line
+	1050 1850 1300 1850
+Wire Wire Line
+	1300 1850 1300 1450
+Connection ~ 1300 1450
+$Comp
+L power:GND #PWR02
+U 1 1 60A78503
+P 1150 1550
+F 0 "#PWR02" H 1150 1300 50  0001 C CNN
+F 1 "GND" H 1155 1377 50  0000 C CNN
+F 2 "" H 1150 1550 50  0001 C CNN
+F 3 "" H 1150 1550 50  0001 C CNN
+	1    1150 1550
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	1050 1550 1150 1550
+Wire Wire Line
+	1500 1950 1050 1950
+Wire Wire Line
+	1500 1950 1500 1750
+Connection ~ 1500 1950
 $Comp
 L Device:C_Small C?
-U 1 1 609C9385
-P 4325 5725
-F 0 "C?" V 4100 5675 50  0000 L CNN
-F 1 "C_lp" V 4200 5650 50  0000 L CNN
-F 2 "" H 4325 5725 50  0001 C CNN
-F 3 "~" H 4325 5725 50  0001 C CNN
-	1    4325 5725
+U 1 1 607B52DF
+P 9700 1250
+AR Path="/60683724/607B52DF" Ref="C?"  Part="1" 
+AR Path="/607B52DF" Ref="C23"  Part="1" 
+F 0 "C23" H 9792 1296 50  0000 L CNN
+F 1 "0402_1.0uF__105_10%_25V" H 9749 1480 50  0001 L BNN
+F 2 "lc_lib:0402_C" H 9699 970 50  0001 L BNN
+F 3 "http://www.szlcsc.com/product/details_53938.html" H 9699 1070 50  0001 L BNN
+F 4 "贴片电容" H 9700 1250 50  0001 C CNN "description"
+F 5 "供应商链接" H 9699 870 50  0001 L BNN "ComponentLink1Description"
+F 6 "0402" H 9699 770 50  0001 L BNN "Package"
+F 7 "LC" H 9699 670 50  0001 L BNN "Supplier"
+F 8 "C52923" H 9699 570 50  0001 L BNN "SuppliersPartNumber"
+F 9 "1.0uF" H 9792 1205 50  0000 L CNN "Comment"
+	1    9700 1250
 	1    0    0    -1  
 $EndComp
 Wire Wire Line
-	4025 5500 4325 5500
+	9400 1000 9400 1100
 Wire Wire Line
-	4325 5950 4325 5825
+	9400 1100 9700 1100
 Wire Wire Line
-	4325 5625 4325 5500
-Connection ~ 4325 5500
+	9700 1100 9700 1150
+Connection ~ 9400 1100
 Wire Wire Line
-	4325 5175 4325 4825
+	9400 1100 9400 1700
 Wire Wire Line
-	4325 4825 4025 4825
+	9300 1000 9300 1100
 Wire Wire Line
-	4325 5500 4325 5375
-Connection ~ 6050 3875
+	9300 1100 8950 1100
 Wire Wire Line
-	6050 3875 6050 3700
+	8950 1100 8950 1150
+Connection ~ 9300 1100
 Wire Wire Line
-	5525 4825 6050 4825
+	9300 1100 9300 1700
 Wire Wire Line
-	6050 3875 6600 3875
-Text Notes 4375 3400 0    50   ~ 0
-* not VDDA?????\n
+	8950 1450 8950 1350
+Wire Wire Line
+	9700 1450 9700 1400
+$Comp
+L Device:CP_Small C5
+U 1 1 60B0789F
+P 10150 1250
+F 0 "C5" H 10238 1296 50  0000 L CNN
+F 1 "3528_100uF__107_10%_6.3V" H 10199 1400 50  0001 L BNN
+F 2 "Capacitor_THT:CP_Radial_D6.3mm_P2.50mm" H 10149 870 50  0001 L BNN
+F 3 "http://www.szlcsc.com/product/details_16815.html" H 10149 970 50  0001 L BNN
+F 4 "钽电容" H 10150 1250 50  0001 C CNN "description"
+F 5 "供应商链接" H 10149 770 50  0001 L BNN "ComponentLink1Description"
+F 6 "3528" H 10149 670 50  0001 L BNN "Package"
+F 7 "LC" H 10149 570 50  0001 L BNN "Supplier"
+F 8 "C16133" H 10149 470 50  0001 L BNN "SuppliersPartNumber"
+F 9 "100uF" H 10238 1205 50  0000 L CNN "Comment"
+	1    10150 1250
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	9700 1100 10150 1100
+Wire Wire Line
+	10150 1100 10150 1150
+Connection ~ 9700 1100
+Wire Wire Line
+	10150 1350 10150 1400
+Wire Wire Line
+	10150 1400 9700 1400
+Connection ~ 9700 1400
+Wire Wire Line
+	9700 1400 9700 1350
+$Comp
+L Device:C_Small C?
+U 1 1 607F03D3
+P 1800 3100
+F 0 "C?" H 1892 3146 50  0000 L CNN
+F 1 "0402_100nF__104_10%_16V" H 1849 3330 50  0001 L BNN
+F 2 "Capacitor_SMD:C_0402_1005Metric" H 1799 2820 50  0001 L BNN
+F 3 "http://www.szlcsc.com/product/details_1877.html" H 1799 2920 50  0001 L BNN
+F 4 "贴片电容" H 1800 3100 50  0001 C CNN "description"
+F 5 "供应商链接" H 1799 2720 50  0001 L BNN "ComponentLink1Description"
+F 6 "0402" H 1799 2620 50  0001 L BNN "Package"
+F 7 "LC" H 1799 2520 50  0001 L BNN "Supplier"
+F 8 "C1525" H 1799 2420 50  0001 L BNN "SuppliersPartNumber"
+F 9 "100nF" H 1892 3055 50  0000 L CNN "Comment"
+	1    1800 3100
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:C_Small C?
+U 1 1 607F08D5
+P 1400 3100
+F 0 "C?" H 1492 3146 50  0000 L CNN
+F 1 "0402_100nF__104_10%_16V" H 1449 3330 50  0001 L BNN
+F 2 "Capacitor_SMD:C_0402_1005Metric" H 1399 2820 50  0001 L BNN
+F 3 "http://www.szlcsc.com/product/details_1877.html" H 1399 2920 50  0001 L BNN
+F 4 "贴片电容" H 1400 3100 50  0001 C CNN "description"
+F 5 "供应商链接" H 1399 2720 50  0001 L BNN "ComponentLink1Description"
+F 6 "0402" H 1399 2620 50  0001 L BNN "Package"
+F 7 "LC" H 1399 2520 50  0001 L BNN "Supplier"
+F 8 "C1525" H 1399 2420 50  0001 L BNN "SuppliersPartNumber"
+F 9 "100nF" H 1492 3055 50  0000 L CNN "Comment"
+	1    1400 3100
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:C_Small C?
+U 1 1 607F1F9E
+P 1000 3100
+F 0 "C?" H 1092 3146 50  0000 L CNN
+F 1 "0402_100nF__104_10%_16V" H 1049 3330 50  0001 L BNN
+F 2 "Capacitor_SMD:C_0402_1005Metric" H 999 2820 50  0001 L BNN
+F 3 "http://www.szlcsc.com/product/details_1877.html" H 999 2920 50  0001 L BNN
+F 4 "贴片电容" H 1000 3100 50  0001 C CNN "description"
+F 5 "供应商链接" H 999 2720 50  0001 L BNN "ComponentLink1Description"
+F 6 "0402" H 999 2620 50  0001 L BNN "Package"
+F 7 "LC" H 999 2520 50  0001 L BNN "Supplier"
+F 8 "C1525" H 999 2420 50  0001 L BNN "SuppliersPartNumber"
+F 9 "100nF" H 1092 3055 50  0000 L CNN "Comment"
+	1    1000 3100
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:C_Small C?
+U 1 1 607F2284
+P 2700 3100
+F 0 "C?" H 2792 3146 50  0000 L CNN
+F 1 "0402_100nF__104_10%_16V" H 2749 3330 50  0001 L BNN
+F 2 "Capacitor_SMD:C_0402_1005Metric" H 2699 2820 50  0001 L BNN
+F 3 "http://www.szlcsc.com/product/details_1877.html" H 2699 2920 50  0001 L BNN
+F 4 "贴片电容" H 2700 3100 50  0001 C CNN "description"
+F 5 "供应商链接" H 2699 2720 50  0001 L BNN "ComponentLink1Description"
+F 6 "0402" H 2699 2620 50  0001 L BNN "Package"
+F 7 "LC" H 2699 2520 50  0001 L BNN "Supplier"
+F 8 "C1525" H 2699 2420 50  0001 L BNN "SuppliersPartNumber"
+F 9 "100nF" H 2792 3055 50  0000 L CNN "Comment"
+	1    2700 3100
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:C_Small C?
+U 1 1 607F2C98
+P 3900 3100
+F 0 "C?" H 3992 3146 50  0000 L CNN
+F 1 "0402_10nF__103_10%_50V" H 3949 3330 50  0001 L BNN
+F 2 "Capacitor_SMD:C_0402_1005Metric" H 3899 2820 50  0001 L BNN
+F 3 "http://www.szlcsc.com/product/details_15869.html" H 3899 2920 50  0001 L BNN
+F 4 "贴片电容" H 3900 3100 50  0001 C CNN "description"
+F 5 "供应商链接" H 3899 2720 50  0001 L BNN "ComponentLink1Description"
+F 6 "0402" H 3899 2620 50  0001 L BNN "Package"
+F 7 "LC" H 3899 2520 50  0001 L BNN "Supplier"
+F 8 "C15195" H 3899 2420 50  0001 L BNN "SuppliersPartNumber"
+F 9 "10nF" H 3992 3055 50  0000 L CNN "Comment"
+	1    3900 3100
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:C_Small C?
+U 1 1 607F39AE
+P 3100 3100
+F 0 "C?" H 3192 3146 50  0000 L CNN
+F 1 "0402_4.7uF__475_20%_10V" H 3149 3330 50  0001 L BNN
+F 2 "Capacitor_SMD:C_0402_1005Metric" H 3099 2820 50  0001 L BNN
+F 3 "http://www.szlcsc.com/product/details_24469.html" H 3099 2920 50  0001 L BNN
+F 4 "贴片电容" H 3100 3100 50  0001 C CNN "description"
+F 5 "供应商链接" H 3099 2720 50  0001 L BNN "ComponentLink1Description"
+F 6 "0402" H 3099 2620 50  0001 L BNN "Package"
+F 7 "LC" H 3099 2520 50  0001 L BNN "Supplier"
+F 8 "C23733" H 3099 2420 50  0001 L BNN "SuppliersPartNumber"
+F 9 "4.7uF" H 3192 3055 50  0000 L CNN "Comment"
+	1    3100 3100
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:C_Small C?
+U 1 1 607F4489
+P 2200 3100
+F 0 "C?" H 2292 3146 50  0000 L CNN
+F 1 "0402_4.7uF__475_20%_10V" H 2249 3330 50  0001 L BNN
+F 2 "Capacitor_SMD:C_0402_1005Metric" H 2199 2820 50  0001 L BNN
+F 3 "http://www.szlcsc.com/product/details_24469.html" H 2199 2920 50  0001 L BNN
+F 4 "贴片电容" H 2200 3100 50  0001 C CNN "description"
+F 5 "供应商链接" H 2199 2720 50  0001 L BNN "ComponentLink1Description"
+F 6 "0402" H 2199 2620 50  0001 L BNN "Package"
+F 7 "LC" H 2199 2520 50  0001 L BNN "Supplier"
+F 8 "C23733" H 2199 2420 50  0001 L BNN "SuppliersPartNumber"
+F 9 "4.7uF" H 2292 3055 50  0000 L CNN "Comment"
+	1    2200 3100
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:C_Small C?
+U 1 1 607F52C4
+P 4300 3100
+F 0 "C?" H 4392 3146 50  0000 L CNN
+F 1 "0402_1.0uF__105_10%_25V" H 4349 3330 50  0001 L BNN
+F 2 "Capacitor_SMD:C_0402_1005Metric" H 4299 2820 50  0001 L BNN
+F 3 "http://www.szlcsc.com/product/details_53938.html" H 4299 2920 50  0001 L BNN
+F 4 "贴片电容" H 4300 3100 50  0001 C CNN "description"
+F 5 "供应商链接" H 4299 2720 50  0001 L BNN "ComponentLink1Description"
+F 6 "0402" H 4299 2620 50  0001 L BNN "Package"
+F 7 "LC" H 4299 2520 50  0001 L BNN "Supplier"
+F 8 "C52923" H 4299 2420 50  0001 L BNN "SuppliersPartNumber"
+F 9 "1.0uF" H 4392 3055 50  0000 L CNN "Comment"
+	1    4300 3100
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	1000 3000 1400 3000
+Connection ~ 1400 3000
+Wire Wire Line
+	1400 3000 1800 3000
+Connection ~ 1800 3000
+Wire Wire Line
+	1800 3000 2200 3000
+Wire Wire Line
+	2700 3000 3100 3000
+Wire Wire Line
+	4300 3000 3900 3000
+Wire Wire Line
+	3900 3200 4300 3200
+Wire Wire Line
+	3100 3200 2700 3200
+Wire Wire Line
+	2200 3200 1800 3200
+Connection ~ 1400 3200
+Wire Wire Line
+	1400 3200 1000 3200
+Connection ~ 1800 3200
+Wire Wire Line
+	1800 3200 1400 3200
+$Comp
+L power:+3.3V #PWR?
+U 1 1 6080AB64
+P 1000 2900
+F 0 "#PWR?" H 1000 2750 50  0001 C CNN
+F 1 "+3.3V" H 1015 3073 50  0000 C CNN
+F 2 "" H 1000 2900 50  0001 C CNN
+F 3 "" H 1000 2900 50  0001 C CNN
+	1    1000 2900
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	1000 2900 1000 3000
+Connection ~ 1000 3000
+$Comp
+L power:+3.3V #PWR?
+U 1 1 6080E43F
+P 2700 2900
+F 0 "#PWR?" H 2700 2750 50  0001 C CNN
+F 1 "+3.3V" H 2715 3073 50  0000 C CNN
+F 2 "" H 2700 2900 50  0001 C CNN
+F 3 "" H 2700 2900 50  0001 C CNN
+	1    2700 2900
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	2700 2900 2700 3000
+Connection ~ 2700 3000
 $Comp
 L power:GND #PWR?
-U 1 1 60B28518
-P 6950 4175
-F 0 "#PWR?" H 6950 3925 50  0001 C CNN
-F 1 "GND" H 6955 4002 50  0000 C CNN
-F 2 "" H 6950 4175 50  0001 C CNN
-F 3 "" H 6950 4175 50  0001 C CNN
-	1    6950 4175
+U 1 1 608125CB
+P 2700 3300
+F 0 "#PWR?" H 2700 3050 50  0001 C CNN
+F 1 "GND" H 2705 3127 50  0000 C CNN
+F 2 "" H 2700 3300 50  0001 C CNN
+F 3 "" H 2700 3300 50  0001 C CNN
+	1    2700 3300
 	1    0    0    -1  
 $EndComp
-Text Notes 7125 4450 0    50   ~ 0
-* GNDA ??
+$Comp
+L power:GND #PWR?
+U 1 1 60812610
+P 1000 3300
+F 0 "#PWR?" H 1000 3050 50  0001 C CNN
+F 1 "GND" H 1005 3127 50  0000 C CNN
+F 2 "" H 1000 3300 50  0001 C CNN
+F 3 "" H 1000 3300 50  0001 C CNN
+	1    1000 3300
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR?
+U 1 1 6081283D
+P 3900 3300
+F 0 "#PWR?" H 3900 3050 50  0001 C CNN
+F 1 "GND" H 3905 3127 50  0000 C CNN
+F 2 "" H 3900 3300 50  0001 C CNN
+F 3 "" H 3900 3300 50  0001 C CNN
+	1    3900 3300
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:+3.3V #PWR?
+U 1 1 60812A4C
+P 3900 2900
+F 0 "#PWR?" H 3900 2750 50  0001 C CNN
+F 1 "+3.3V" H 3915 3073 50  0000 C CNN
+F 2 "" H 3900 2900 50  0001 C CNN
+F 3 "" H 3900 2900 50  0001 C CNN
+	1    3900 2900
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	3900 2900 3900 3000
+Connection ~ 3900 3000
+Wire Wire Line
+	3900 3300 3900 3200
+Connection ~ 3900 3200
+Wire Wire Line
+	2700 3200 2700 3300
+Connection ~ 2700 3200
+Wire Wire Line
+	1000 3300 1000 3200
+Connection ~ 1000 3200
+$Comp
+L lc_LDO:SOT-23_XC6206P332MR VR?
+U 1 1 60822D30
+P 5700 3200
+F 0 "VR?" H 5900 3955 50  0000 C CNN
+F 1 "SOT-23_XC6206P332MR" H 5450 3850 50  0001 L BNN
+F 2 "lc_lib:SOT-23-3L" H 5400 2999 50  0001 L BNN
+F 3 "http://www.szlcsc.com/product/details_5896.html" H 5400 3099 50  0001 L BNN
+F 4 "低压差线性稳压(LDO)" H 5700 3200 50  0001 C CNN "description"
+F 5 "供应商链接" H 5400 2899 50  0001 L BNN "ComponentLink1Description"
+F 6 "SOT-23" H 5400 2799 50  0001 L BNN "Package"
+F 7 "LC" H 5400 2699 50  0001 L BNN "Supplier"
+F 8 "C5446" H 5400 2599 50  0001 L BNN "SuppliersPartNumber"
+F 9 "GND" H 5900 3864 50  0000 C CNN "user"
+F 10 "XC6206P332MR" H 5900 3773 50  0000 C CNN "Comment"
+	1    5700 3200
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:C_Small C?
+U 1 1 608239A8
+P 5400 3000
+F 0 "C?" H 5492 3046 50  0000 L CNN
+F 1 "0402_1.0uF__105_10%_25V" H 5449 3230 50  0001 L BNN
+F 2 "Capacitor_SMD:C_0402_1005Metric" H 5399 2720 50  0001 L BNN
+F 3 "http://www.szlcsc.com/product/details_53938.html" H 5399 2820 50  0001 L BNN
+F 4 "贴片电容" H 5400 3000 50  0001 C CNN "description"
+F 5 "供应商链接" H 5399 2620 50  0001 L BNN "ComponentLink1Description"
+F 6 "0402" H 5399 2520 50  0001 L BNN "Package"
+F 7 "LC" H 5399 2420 50  0001 L BNN "Supplier"
+F 8 "C52923" H 5399 2320 50  0001 L BNN "SuppliersPartNumber"
+F 9 "1.0uF" H 5492 2955 50  0000 L CNN "Comment"
+	1    5400 3000
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:C_Small C?
+U 1 1 60823F57
+P 6400 3000
+F 0 "C?" H 6492 3046 50  0000 L CNN
+F 1 "0402_1.0uF__105_10%_25V" H 6449 3230 50  0001 L BNN
+F 2 "Capacitor_SMD:C_0402_1005Metric" H 6399 2720 50  0001 L BNN
+F 3 "http://www.szlcsc.com/product/details_53938.html" H 6399 2820 50  0001 L BNN
+F 4 "贴片电容" H 6400 3000 50  0001 C CNN "description"
+F 5 "供应商链接" H 6399 2620 50  0001 L BNN "ComponentLink1Description"
+F 6 "0402" H 6399 2520 50  0001 L BNN "Package"
+F 7 "LC" H 6399 2420 50  0001 L BNN "Supplier"
+F 8 "C52923" H 6399 2320 50  0001 L BNN "SuppliersPartNumber"
+F 9 "1.0uF" H 6492 2955 50  0000 L CNN "Comment"
+	1    6400 3000
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	5400 2900 5400 2800
+Wire Wire Line
+	6400 2900 6400 2800
+Wire Wire Line
+	5400 3100 5400 3200
+Wire Wire Line
+	5400 3200 5900 3200
+Wire Wire Line
+	5900 3200 6400 3200
+Wire Wire Line
+	6400 3200 6400 3100
+Connection ~ 5900 3200
+$Comp
+L power:GND #PWR?
+U 1 1 608354DB
+P 5900 3200
+F 0 "#PWR?" H 5900 2950 50  0001 C CNN
+F 1 "GND" H 5905 3027 50  0000 C CNN
+F 2 "" H 5900 3200 50  0001 C CNN
+F 3 "" H 5900 3200 50  0001 C CNN
+	1    5900 3200
+	1    0    0    -1  
+$EndComp
+Text HLabel 5200 2800 0    50   Input ~ 0
+VM
+$Comp
+L power:+3.3V #PWR?
+U 1 1 60836BEB
+P 6500 2800
+F 0 "#PWR?" H 6500 2650 50  0001 C CNN
+F 1 "+3.3V" H 6515 2973 50  0000 C CNN
+F 2 "" H 6500 2800 50  0001 C CNN
+F 3 "" H 6500 2800 50  0001 C CNN
+	1    6500 2800
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	6500 2800 6400 2800
+Connection ~ 6400 2800
+Wire Wire Line
+	5400 2800 5200 2800
+Connection ~ 5400 2800
+$Comp
+L power:PWR_FLAG #FLG?
+U 1 1 608400D8
+P 6500 2800
+F 0 "#FLG?" H 6500 2875 50  0001 C CNN
+F 1 "PWR_FLAG" V 6500 2928 50  0000 L CNN
+F 2 "" H 6500 2800 50  0001 C CNN
+F 3 "~" H 6500 2800 50  0001 C CNN
+	1    6500 2800
+	0    1    1    0   
+$EndComp
+Connection ~ 6500 2800
 $EndSCHEMATC

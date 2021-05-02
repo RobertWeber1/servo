@@ -1,5 +1,9 @@
 EESchema-DOCLIB  Version 2.0
 #
+$CMP MAX9918A
+F https://datasheet.lcsc.com/szlcsc/Maxim-Integrated-MAX9918ASA_C143631.pdf
+$ENDCMP
+#
 $CMP STSPIN32F0
 F https://www.st.com/resource/en/datasheet/stspin32f0.pdf
 $ENDCMP
